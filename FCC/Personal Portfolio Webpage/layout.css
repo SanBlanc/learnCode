@@ -1,0 +1,257 @@
+
+.container{
+    background-color: #231F20;
+    padding:0 calc((8.33%)/2);
+}
+
+/** header
+ * --------------------------------------------------------------------------
+*/
+
+header{
+    height:60px;
+    width:100%;
+
+    position:fixed;
+    top:0;
+    left: 0;
+
+    background-color: #222222;
+}
+header .container{  justify-content: space-between; }
+header h1 a{color:#fff;font-size: 2em;}
+header a{font-size: 1.6em;color:#aaa;display: inline-block;line-height: 60px;padding:0 24px;font-weight: bold;text-shadow:2px 2px 1px #111;}
+header a:hover{color:#A29060;box-shadow:0px 0px 8px #A29060 inset;border-radius: 2px;}
+
+
+/** footer
+ * --------------------------------------------------------------------------
+*/
+footer{
+    height: 164px;
+    background-color: #191718;
+    padding-left: 52px;
+    padding-top: 32px;
+}
+footer ul li{
+    display: inline;
+}
+footer ul li:not(:first-of-type){
+    text-indent: 8px;
+}
+footer ul li:not(:last-of-type){
+    padding-right:8px;
+}
+footer ul li a{
+    color:#9F9D9E;
+    line-height:4;
+    display: inline-block;
+    text-shadow: 1px 0 0 #171717;
+}
+footer ul li a:hover{
+    color:#B8A56A;
+}
+footer p{
+    flex-basis: 100%;
+    font-size: .8rem;
+    color:#777777;
+    text-shadow: 1px 0 0 #171717;
+}
+
+/** main
+ * --------------------------------------------------------------------------
+*/
+main{
+    margin-top: 60px;
+}
+
+#home{
+    background: url('http://i2.hdslb.com/bfs/archive/4670c1221757c4a780a9d227a2f6f802dcd1927b.jpg') no-repeat center center fixed;
+}
+#about{
+    background: url('http://ww2.sinaimg.cn/large/bd4ca052jw1f6zc3m6grdj21hc0u0ttv.jpg') no-repeat center center fixed;
+}
+#portfolio{
+    background: url('http://ww4.sinaimg.cn/large/bd4ca052jw1f6whukxsg4j21hc0u07wh.jpg') no-repeat center center fixed;
+}
+#contact{
+    background: url('http://i0.hdslb.com/video/5e/5e1f6e7c3ed61544d44660110e0c6ee0.jpg') no-repeat center center fixed;
+}
+/*vw”=”view width”, “vh”=”view height”;*/
+#home,#about,#contact,#portfolio{height:100vh;background-size: cover;}
+/*
+* #home
+*/
+#home{
+    flex-flow:column nowrap;
+}
+#home h2{
+    font-size: 4rem;
+    text-shadow:-1px -1px rgba(255,255,255,.7),2px 2px 1px rgba(0,0,0,.5);
+    color:#A29060;
+}
+#home h3{
+    line-height: 2;
+    font-size: 1.8rem;
+    color:#aaa;
+    text-shadow:1px 1px 1px #000,-1px -1px rgba(0,0,0,.2);
+}
+#home hr{
+    height:2px;
+    width:100%;
+    background-color: #999;
+    box-shadow:0 1px 0 #A29060 inset,0 2px 1px rgba(0,0,0,.5);
+    margin-bottom: 24px;
+}
+#home .row{display: flex;justify-content: space-around;align-items: center;position: relative;height:60px;padding:0 240px;}
+#home .btn{display: inline-block;}
+
+
+
+/*#about */
+#about{
+    overflow: hidden;
+    padding:0 calc((8.33%)/2);
+}
+#about .about-me{
+/*    width:300px;
+    height:300px;*/
+    flex-basis: 60%;
+}
+#about .about-me .img-self{
+    border-radius: 50%;
+    margin-left:50%;
+    width:300px;
+    height:300px;
+    background: url("http://i2.hdslb.com/video/64/6411668e6c7299146795c810f3af86f2.jpg") center center no-repeat;
+    background-size:cover;
+   /*box-shadow:0 0 10px rgba(0,0,0,.8);*/
+   box-shadow:0 0 24px #A29060 inset;
+}
+#about .about-me .img-self:hover{
+    box-shadow: 0 0 60px rgba(255,255,255,.6);
+}
+#about .about-Info{
+    flex-basis: 40%;
+    padding-top: 28px;
+    /*background-color: rgba(255,255,255,.2);*/
+    height:80%;
+    padding-left: 1rem;
+}
+#about  h2{
+    font-size: 3.2rem;
+    color:#A29060;
+    text-shadow:-1px -1px rgba(255,255,255,.3),2px 2px 1px rgba(0,0,0,.5);
+}
+#about p{
+    font-size: 1.6em;
+    color:#aaa;
+    text-shadow:1px 1px rgba(0,0,0,.2);
+}
+#about p a{
+    /*color:#aaa;*/
+    color:olive;
+}
+#about p a:hover{
+    color:#A29060;
+}
+
+/*#portfolio*/
+#portfolio{
+    padding:0 calc((8.33%)/2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow:column nowrap;
+    line-height: 1.25;
+    padding-top: 6vh;
+}
+#portfolio h2{text-align: center;font-size:3.2rem;color:#A29060;
+    text-shadow:-1px -1px rgba(255,255,255,.3),2px 2px 1px rgba(0,0,0,.5);}
+#portfolio h3{text-align: center;font-size: 2rem;text-shadow: 1px 1px rgba(0,0,0,.5);color:#ccc;}
+#portfolio ul{
+    /*overflow: hidden;*/
+    width:100%;
+    margin:24px auto 0;
+    /*background-color: red;*/
+    font-size: 0;
+    letter-spacing: -3px;
+}
+#portfolio li{
+    background:url("http://7xrp04.com1.z0.glb.clouddn.com/task_1_9_2.jpg") center center no-repeat;
+    background-size:cover;
+    width:32%;
+    height:30%;
+    /*outline:1px solid #aaa;*/
+    /*outline-offset:4px;*/
+    border:8px solid rgba(255,255,255,.2);
+    border-top-width: 0;
+    border-bottom-width: 0;
+    overflow: hidden;
+    display: inline-block;
+    font-size: 1rem;
+    letter-spacing: 0;
+    position: relative;
+}
+#portfolio li{margin-bottom: 12px;transition: all .2s ease-in-out;}
+
+
+#portfolio li:hover{
+    box-shadow: 4px 4px 4px #131313;
+    border-color:#333;
+}
+#portfolio li:hover .pro-mask{opacity: .8;}
+#portfolio .pro-mask{
+    background: rgba(0,0,0,.8) url("github - m.png") center center no-repeat;
+    width:100%;
+    height:100%;
+    opacity:0;
+    position: absolute;
+}
+#portfolio .pro-mask a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+#portfolio .pro-txt{
+    background-color: rgba(0,0,0,.6);
+    color:#fff;
+    text-align: center;
+    margin-top:138px;
+    line-height: 1.25;
+    padding:12px 0;
+    font-size: 1.2rem;
+}
+#portfolio .pro-txt p:last-of-type{
+    font-style: italic;
+    font-size: .8rem;
+    font-weight: normal;
+}
+
+
+
+/*#contact*/
+#contact {
+    padding:0 calc((8.33%)/2);
+    display: flex;
+    height:100vh;
+    justify-content: space-between;
+    align-items: center;
+}
+#contact .contact-txt{
+    flex-basis: 60%;
+    height:50%;
+    font-size: 2rem;
+    line-height: 1.25;
+    text-shadow: 2px 2px 1px rgba(0,0,0,.5),-1px -1px rgba(255,255,255,.2);
+    color:#A29060;
+}
+
+#contact .row{
+    flex-basis:20%;
+    display: flex;
+    height:50%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}

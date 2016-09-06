@@ -1,0 +1,186 @@
+/** public
+ * --------------------------------------------------------------------------
+*/
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    /* 62.5%  16px(default)*62.5 =  10px  = 1rem!  ???有问题 */
+    font: 62.5%/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+
+h1, h2, h3, h4 {
+    font-weight: bold;
+}
+
+/*h1{font-size: 4rem;}
+h2{font-size: 3.2rem;}
+h3{font-size:2.8rem;}
+h4{font-size:2.4rem;}
+p,a{font-size: 1.6rem;}*/
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/*使用绝对定位居中*/
+.center-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    transform: translate(-50%, -50%);
+}
+
+/*清除浮动影响*/
+.clearfix:after {
+    display: block;
+    height: 0;
+    clear: both;
+    content: "";
+    overflow: hidden;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* public style */
+
+.btn {
+    padding: 12px 20px;
+    background-color: #131313;
+    border-radius: 8px;
+    border: 2px solid #131313;
+    box-shadow: 2px 2px 1px rgba(255, 255, 255, .2), 0 0 4px #A29060 inset;
+    font-size: 1.6em;
+    transition: all .2s ease-in-out;
+}
+
+.btn a {
+    color: #ccc;
+    display: block;
+}
+
+.btn a:hover {
+    color: #A29060;
+    text-decoration: none;
+}
+
+.btn:hover {
+    padding: 12px 22px;
+    background-color: #000;
+
+    font-size: 2em;
+    border-color: #A29060;
+}
+
+.btn a:hover img {
+    width: 32px;
+}
+
+/* github */
+.row button img {
+    width: 26px;
+    /*margin-left: 12px;*/
+    margin-right: 12px;
+    vertical-align: bottom;
+}
+
+/* FreeCodeCamp */
+/*.row button:first-of-type i{background: url("weibo.png") left center no-repeat;text-indent: 32px;}*/
+
+/* 12列响应式布局 */
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+/* col- 公共样式 */
+[class*="col-"] {
+
+}
+
+.col-offset-2 {
+    /*margin:0 32px;*/
+}
+
+.row {
+    overflow: hidden;
+    width: 100%;
+}
+
+.row:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+/*flex*/
+/*水平垂直居中，父元素高度不为0*/
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-space-bet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
