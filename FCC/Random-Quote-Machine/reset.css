@@ -1,0 +1,27 @@
+body, html, div, blockquote, img, label, p, h1, h2, h3, h4, h5, h6, pre, ul, ol,
+li, dl, dt, dd, form, a, fieldset, input, th, td,button{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+}
+/* Remove button padding in FF */
+button::-moz-focus-inner {
+    border:0;
+    padding:0;
+}
+
+ul, ol {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+/*h1,h2,h3,h4{font-weight: bold;}*/
+
+/*旧版本支持语义化便签*/
+header, section, footer, aside, nav, article, figure
+{
+    display: block;
+}

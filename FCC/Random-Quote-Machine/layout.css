@@ -1,0 +1,128 @@
+/**
+*七个颜色
+#E74C3C、#342224、#77B1A9、#73A857、#F39C12、#2C3E50、#472E32
+*/
+
+/*public*/
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font: 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* extend */
+.clearfix:after {
+    display: block;
+    height: 0;
+    clear: both;
+    content: "";
+    overflow: hidden;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/*style*/
+.fix-center{
+    position:absolute;
+    top:50%;
+    left:50%;
+    z-index:3;
+    transform:translate(-50%,-50%);
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex-around {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/*默认主色  #FB6964  红色*/
+
+.container {
+    background-color: #FB6964;/*color*/
+    /*height: 100vh;*/
+    min-height: 100vh;
+    flex-wrap: wrap;
+}
+
+.page-author {
+    color: #fff;
+    line-height: 3; /*拉开距离*/
+    align-self: flex-start;
+    text-align: center;
+}
+
+.quote-box {
+    flex-wrap: wrap;
+    align-self: flex-end;
+
+    border-radius: 8px;
+    background-color: #fff;
+    /* 可以不用数字吗*/
+    padding: 32px;
+    color: #FB6964;/*color*/
+
+}
+
+.quote-box h2 {
+    flex-basis: 100%;
+    font-size: 2em;
+    text-align: center;
+}
+
+.quote-box footer {
+    flex-basis: 100%;
+    text-align: right;
+    margin: 1em 0 2em;
+}
+
+.quote-control {
+    flex-basis: 100%;
+}
+
+.btn {
+    border-radius: 4px;
+}
+
+.btn a {
+    display: block;
+    color: #fff;
+    font-size: 1.2em;
+    border-radius: 4px;
+    background-color: #FB6964;/*color*/
+    padding: 0 1em;
+    line-height: 38px;
+    height: 40px;
+}
+
+/*
+.btn a:hover {
+    !*background-color:#FB7873;*!
+    background-color: rgba(251, 105, 100, .8);
+}
+*/
+
+
+
+
+
