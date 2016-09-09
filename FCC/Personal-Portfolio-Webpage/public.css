@@ -78,10 +78,12 @@ a:hover {
 }
 
 .btn:hover {
-    padding: 12px 22px;
+	font-size: 2em;
+    /*padding: 12px 22px;*/
+	
+	transform:scale(1.01); 
+	
     background-color: #000;
-
-    font-size: 2em;
     border-color: #A29060;
 }
 
