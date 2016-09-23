@@ -1,0 +1,91 @@
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-image: url('http://img.article.pchome.net/00/33/90/08/pic_lib/wm/deng041.jpg');
+
+}
+
+.container {
+    width: 624px;
+    padding-bottom: 36px;
+    /*height: 418px;*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background: rgba(255, 255, 255, .5);
+    border-radius: 8px;
+    font-family: Helvetica, 'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+    overflow: hidden;
+}
+
+.container h1{
+    text-align: center;
+    background: rgba(46,109,164,.5);
+    color:#fff;
+    border-radius: 8px 8px 0 0;
+    padding:16px 0 8px;
+    font-size: 24px;
+    cursor: pointer;
+    position: relative;
+}
+.container h1:hover:after{
+    display: block;
+}
+.container h1:after{
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 40px;
+    transform: translate(-50%);
+    font-size: 12px;
+    padding:8px 12px;
+    /*color:#333;*/
+    border-radius: 2px 0;
+    border:1px solid rgba(46,109,164,.5);
+    background-color: rgba(12,77,120,.5);
+    content:'点击此处切换城市';
+    text-decoration: underline;
+}
+
+.container section {
+    display: flex;
+    flex-wrap: wrap;
+    padding:20px 20px 0 20px;
+}
+.container header {
+    width: 100%;
+    font-size: 18px;
+    margin-bottom: 12px;
+    color:#333;
+
+    /*text-shadow: 0 0 1px rgba(0,0,0,.3);*/
+}
+.container ul{
+    display: flex;
+
+}
+.item{
+    line-height:2;
+    font-size: 12px;
+    color:#333;
+    flex:1;
+
+    margin:0 4px;
+    /*max-width: 35%;*/
+    padding:4px;
+    background-color: rgba(255,255,255,.5);
+    border:1px solid rgba(46,109,164,.5);
+    border-radius: 4px;
+}
+/*最后一项日期*/
+.item p:last-of-type{
+    color:rgba(46,109,164,1);
+
+}
+
+#today_content li:first-of-type{
+    flex-basis: 45%;
+}
