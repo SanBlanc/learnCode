@@ -1,0 +1,92 @@
+body{
+  background:#092B40;
+  min-height: 100vh;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: Helvetica, "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  input{
+    border:none;
+    outline:none;
+  }
+}
+.container{
+  width:100%;
+  margin:50px auto;
+  transition: all 1s ease-in-out;
+  text-align: center;
+  //display: flex;
+  //flex-direction: column;
+  //align-items: center;
+  color:#fff;
+  a{
+    color:#fff;
+    text-decoration: none;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
+  form{
+    text-align: center;
+
+    input,label{
+      display: block;
+      margin:0 auto;
+      cursor: pointer;
+    }
+    input{
+      width:240px;
+      height:24px;
+      border:1px  solid #D96F32;
+      padding-left: 12px;
+      display: none;
+    }
+    label:first-of-type{
+      width:64px;
+      height: 64px;
+      background-image: url('https://cdn1.iconfinder.com/data/icons/hawcons/32/698838-icon-111-search-512.png');
+      background-size: cover;
+    }
+  }
+}
+.margin-top-center{
+  margin-top: 30vh;
+}
+form .input-focus{
+  border-radius: 12px;
+}
+
+.container .item{
+  text-align: left;
+  width:60%;
+  margin:0 auto;
+  max-height:6.3rem;
+  min-height:2em;
+  padding:8px 16px;
+
+  border:1px solid #666;
+  background:rgba(255,255,255,.8);
+  border-left-width:5px;
+  margin-top: 20px;
+  color:#333;
+  box-shadow: 2px 2px 1px rgba(0,0,0,.2);
+
+  overflow: hidden;
+  //line-height: 1.6;
+  a{
+    color:#333;
+    &:hover{
+      text-decoration: none;
+    }
+  }
+  h2{
+    font-size: 24px;
+    line-height: 1.8;
+  }
+  p{
+   font-size: 14px;
+  }
+}
+.container .item:hover{
+  border-color:#137CF8;
+}
