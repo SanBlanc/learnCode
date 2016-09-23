@@ -79,7 +79,7 @@
                     move(obj);
                 }, 1000);
             }
-        }, 30);
+        }, 50);
 
     }
 
@@ -125,10 +125,10 @@
                     clearInterval(_dom.timer);
                 }
                 _dom.style.left = maxWid + 'px';
-                console.log("等待3s后重新开始移动！");
+                console.log("等待5s后重新开始移动！");
                 setTimeout(function () {
                     restartScroll(_dom);
-                }, 3000);
+                }, 5000);
             })(i);
         }
     }
