@@ -1,23 +1,29 @@
 /** public
  * --------------------------------------------------------------------------
 */
+
 html {
     box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
     box-sizing: inherit;
 }
 
 body {
     /* 62.5%  16px(default)*62.5 =  10px  = 1rem!  ???有问题 */
     font: 62.5%/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
-
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-weight: bold;
 }
+
 
 /*h1{font-size: 4rem;}
 h2{font-size: 3.2rem;}
@@ -33,7 +39,9 @@ a:hover {
     text-decoration: underline;
 }
 
+
 /*使用绝对定位居中*/
+
 .center-box {
     position: absolute;
     top: 50%;
@@ -42,7 +50,9 @@ a:hover {
     transform: translate(-50%, -50%);
 }
 
+
 /*清除浮动影响*/
+
 .clearfix:after {
     display: block;
     height: 0;
@@ -54,6 +64,7 @@ a:hover {
 .clearfix {
     *zoom: 1;
 }
+
 
 /* public style */
 
@@ -78,11 +89,9 @@ a:hover {
 }
 
 .btn:hover {
-	font-size: 2em;
+    font-size: 2em;
     /*padding: 12px 22px;*/
-	
-	transform:scale(1.01); 
-	
+    transform: scale(1.01);
     background-color: #000;
     border-color: #A29060;
 }
@@ -91,7 +100,9 @@ a:hover {
     width: 32px;
 }
 
+
 /* github */
+
 .row button img {
     width: 26px;
     /*margin-left: 12px;*/
@@ -99,10 +110,15 @@ a:hover {
     vertical-align: bottom;
 }
 
+
 /* FreeCodeCamp */
+
+
 /*.row button:first-of-type i{background: url("weibo.png") left center no-repeat;text-indent: 32px;}*/
 
+
 /* 12列响应式布局 */
+
 .col-1 {
     width: 8.33%;
 }
@@ -151,10 +167,10 @@ a:hover {
     width: 100%;
 }
 
-/* col- 公共样式 */
-[class*="col-"] {
 
-}
+/* col- 公共样式 */
+
+[class*="col-"] {}
 
 .col-offset-2 {
     /*margin:0 32px;*/
@@ -171,8 +187,12 @@ a:hover {
     display: block;
 }
 
+
 /*flex*/
+
+
 /*水平垂直居中，父元素高度不为0*/
+
 .flex-center {
     display: flex;
     justify-content: center;
@@ -184,5 +204,3 @@ a:hover {
     justify-content: space-between;
     align-items: center;
 }
-
-
