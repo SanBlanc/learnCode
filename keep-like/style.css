@@ -1,0 +1,407 @@
+/*------------------------  public  ------------------------
+-----------------------------------------------------------*/
+
+/*section 背景颜色*/
+.sect-bg-default{
+  background:#FAFAFA;
+}
+.sect-bg-red{
+  background: #FF8A80;
+}
+.sect-bg-orange{
+  background: #FFD180;
+}
+.sect-bg-yellow{
+  background: #FFFF8D;
+}
+.sect-bg-grey{
+  background: #CFD8DC;
+}
+.sect-bg-blue{
+  background: #80D8FF;
+}
+.sect-bg-cyan{
+  background: #A7FFEB;
+}
+.sect-bg-green{
+  background: #CCFF90;
+}
+
+
+
+.clearfix:after {
+  display: block;
+  height: 0;
+  clear: both;
+  content: "";
+  overflow: hidden;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+body {
+  max-width: 100vw;
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+button{
+  border:none;
+  outline:none;
+  margin:0;
+  padding:0;
+  background: none;
+}
+.tooltip{
+  background-color: #333;
+  color: #fff;
+  padding:4px 12px;
+  display: block;
+  min-width: min-content;
+  border-radius: 4px;
+  /*line-height: 2;*/
+  font-size: 12px;
+  opacity: .9;
+  display: none;
+  position: absolute;
+  transform: translateX(-40%);
+  z-index: 3;
+  white-space:nowrap; /* 不允许换行 */
+}
+span.glyphicon{
+  cursor: pointer;
+  color:rgba(0, 0, 0, .6);
+
+}
+/*------------------媒体查询--------------------------
+----------------------------------------------------------*/
+
+@media screen and (min-width: 900px) {
+  .page-header .header-search{
+    margin-right: 30%;
+  }
+
+}
+
+@media screen and (max-width: 900px) {
+  .page-header .header-search{
+    margin-right:0;
+  }
+  main .task-add{
+    margin-top:10px;
+    margin-bottom: 10px;
+  }
+
+}
+
+@media screen and (max-width: 418px) {
+  .page-header{display: none;}
+  main .task-add{
+    width:100%;
+  }
+  .task-wrapper{
+    width:100%;
+  }
+}
+
+
+/**---------------- page-header  ------------------
+-------------------------------------------------*/
+
+.page-header {
+  height: 52px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 3%;
+}
+
+.page-header h1 {
+  color: #767676;
+  font-size: 28px;
+  margin: 0;
+  line-height: 52px;
+}
+
+.header-search {
+  position: relative;
+  max-width:40%;
+  width:100%;
+  min-width: 368px;
+
+  height: 100%;
+}
+.header-search input{
+  display: block;height: 32px;
+  width:100%;
+  border-radius: 4px;
+  margin-top: 10px;
+  background: #F1F1F1;
+
+  text-indent: 2.28rem;
+}
+
+.header-search .icon {
+  position: absolute;
+  top: 13px;
+  line-height: 32px;
+  color: #707070;
+}
+
+.header-search .icon-left {
+  left: 1em;
+}
+
+.header-search .icon-right {
+  right: 1rem;
+}
+
+
+
+/**---------------- pageNav  ------------------
+-------------------------------------------------*/
+
+.page-nav {
+  background-color: #FFBB00;
+  color: #211800;
+  height: 48px;
+  position: relative;
+  padding: 0 3%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-nav .glyphicon {
+  /*color: rgba(0, 0, 0, .6);*/
+  margin:16px 14px;
+}
+
+.page-nav .tooltip {
+  top:50px; /* 48为nav高度，2px间隙 */
+}
+
+
+/**--------------------main -------------------------
+--------------------------------------------------------*/
+
+main {
+  padding: 0 3%;
+  background-color: #E8E8E8;
+  height: 100%;
+  min-height: calc(100vh - 100px);
+  /* 100为header+nav的高度  52+48 */
+  overflow: hidden;
+}
+
+main .task-add {
+
+  min-width: 368px;
+  max-width: 680px;
+  width:100%;
+
+  margin:20px auto;
+  position: relative;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, .5);
+  background:#fff;
+  min-height: 48px;
+
+
+}
+
+main .task-add .content .tooltip{
+
+  bottom:-20px;
+}
+.task-add header{
+  /*overflow: hidden;*/
+  padding-top: 12px;
+  padding-bottom: 12px;
+  display: none;
+}
+.task-add header input{
+  width:100%;
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  text-indent: 1rem;
+  color:#737373;
+
+}
+.task-add footer{
+  line-height: 2;
+  padding-bottom: 12px;
+  padding-left: 1rem;
+  position: relative;
+  display: none;
+}
+.task-add footer .tooltip{
+  bottom:-20px;
+}
+.task-add footer .glyphicon{margin-right:2rem;font-size: 18px;}
+.task-add footer span:last{margin-right: 0;}
+
+.task-add footer button{
+  position: absolute;
+  right: 4rem;
+  padding:0 12px;
+  border-radius: 2px;
+}
+.task-add footer button:hover{
+  background: #E6E6E6;
+}
+
+.task-add .content-extend span{
+ display: none;
+}
+.task-add .content-extend{
+  margin-bottom: 24px;
+}
+
+
+main .task-add .content input{
+  width:100%;
+  height: 100%;
+  border-radius: 2px;
+  text-indent: 1rem;
+  line-height: 48px;
+  height: 48px;
+
+}
+
+
+main .icon {
+  position: absolute;
+  top: 0;
+  line-height: 48px;
+  color: #747474;
+  font-size: 17px;
+}
+
+main .icon-right {
+  right: 2rem;
+}
+
+main .task-add .content span:first-of-type {
+  right: 5rem;
+  margin-top: 1px;
+  /* 视觉偏差 */
+}
+
+.task-wrapper{
+  min-width: 368px;
+  max-width: 800px;
+  width:100%;
+  font-size: 0;
+  letter-spacing: -4px;
+  margin:0 auto;
+  /*min-height: 418px;*/
+  min-height: calc(100vh - 212px);
+}
+.task-wrapper section:nth-of-type(3){
+  margin-right:0;
+}
+.task-wrapper .task{
+  vertical-align: top;
+}
+.task-wrapper .task-list{
+  width: 100%;
+  margin-bottom: 12px;
+}
+.task-wrapper .task-grid{
+  width: calc(33.33% - 20px);
+  /*width:100%;*/
+  /*margin-right: 12px;*/
+  margin:0 10px 12px;
+}
+
+.task-wrapper section:hover{
+  box-shadow: 1px 1px 8px rgba(0,0,0,.4);
+}
+.task-wrapper section{
+  display: inline-block;
+  font-size: 1rem;
+  letter-spacing: 0;
+  line-height: 1.5;
+  color:#111;
+  box-sizing: border-box;
+  padding:12px;
+  border-radius: 2px;
+  box-shadow: 0 2px 1px rgba(0,0,0,.4);
+
+  position: relative;
+}
+
+.task-wrapper section .tooltip{
+  bottom:-16px;
+}
+
+.task .select-icon{
+  position: absolute;
+  width:24px;
+  height:24px;
+  border-radius: 50%;
+  left:0;
+  top:0;
+  background: #fff;
+  transform: translate(-40%,-40%);
+  opacity: 0;
+  transition: all .5s ease-in-out;
+  box-shadow: 1px 1px #ccc;
+}
+.task .select-icon span{
+  margin-left: 2px;
+  margin-top: 4px;
+}
+
+.task:hover .select-icon{
+  opacity: 1;
+}
+.task .select-icon .tooltip{
+  bottom:-30px;
+}
+
+/*标题部分*/
+.task-wrapper section header{
+  font-size: 18px;
+  font-weight: bold;
+    line-height: 2;
+}
+/*内容*/
+.task-wrapper section .content{
+  margin:8px 0 16px;
+}
+
+.task-wrapper .content label{
+  display: block;
+}
+
+.task-wrapper .content label span{
+  width:14px;
+  height: 14px;
+  border:1px solid #333;
+  border-radius: 1px;
+  margin-right: 0.5em;
+}
+
+
+/*底部操作*/
+.task-wrapper section footer{
+  /*height: 36px;*/
+  font-size: 18px;
+  visibility: hidden;
+}
+.task-wrapper section footer span{
+  margin-right: 10px;
+}
+.task-wrapper section footer span::last-of-type{
+  margin-right: 0;
+}
+.task-wrapper section:hover footer{
+  visibility: visible;
+}
