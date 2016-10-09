@@ -1,0 +1,6 @@
+input{border:none;outline: none;}
+
+.timer{width: 300px;height: 300px;border:8px solid #428BCA;border-radius: 50%;margin:30px auto;font-size: 72px;cursor: pointer;}
+.timer .text-center{margin-top: 96px;}
+.container input{display: inline-block;width: 72px;height: 44px;padding-left: 12px;border:1px solid #CCCCCC;border-radius: 8px;}
+div.text-center{vertical-align: bottom;}
