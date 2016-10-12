@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans" ng-app="todoApp">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TO DO LIST</title>
+  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+</head>
+<body  ng-controller="ToDoController">
+
+  <div class="page-header">
+    <h1>{{data.user}}'s To Do List
+      <span class="label label-default" ng-class="warningLevel()" ng-hide="incompleteCount() === 0">{{incompleteCount()}}</span>
+    </h1>
+  </div>
+  <div class="panel">
+    <div class="input-group">
+      <input type="text" class="form-control" ng-model="actionText" ng-keydown="enterHandler($event)">
+      <span class="input-group-btn">
+      <button class="btn btn-default" ng-click="addNewItem(actionText)">Add</button>
+    </span>
+    </div>
+    <table class="table table-striped">
+      <thead>
+      <tr><th>Description</th><th>Done</th></tr>
+      </thead>
+      <tbody>
+      <tr ng-repeat="item in data.items | orderBy:'action' ">
+        <td>{{item.action}}</td>
+        <td><input type="checkbox" ng-model="item.done"></td>
+        <td>{{item.done}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+<script src="./angular-1.5.8.js"></script>
+<script src="./main.js"></script>
+</body>
+</html>
